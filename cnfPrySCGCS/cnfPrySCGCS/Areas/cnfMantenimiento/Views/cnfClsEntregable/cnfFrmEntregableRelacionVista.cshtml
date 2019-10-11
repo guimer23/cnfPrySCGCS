@@ -1,0 +1,75 @@
+﻿<link href="~/asset/css/checkbox.css" rel="stylesheet" />
+<!-- Titulo Encabezado de Pagina -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Entregable Relación</h1>
+    @*<a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generar Reporte</a>*@
+</div>
+
+<!-- Tarjeta de  contenido -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Lista de Entregables</h6>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card-box">
+                    <div class="table-responsive">
+                        <table id="example" class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Entregable</th>
+                                    <th>Nomenclatura</th>
+                                    <th>Fase</th>
+                                    <th class="text-right">Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Especificación de Requerimientos</td>
+                                    <td>ER</td>
+                                    <td>Inicio</td>
+                                    <td class="text-right">
+                                        <label class="switch ">
+                                            <input type="checkbox" class="primary">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Diseño de Arquitectura de Software</td>
+                                    <td>DAS</td>
+                                    <td>Diseño</td>
+                                    <td class="text-right">
+                                        <label class="switch ">
+                                            <input type="checkbox" class="primary">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br />
+                    <div class="row clearfix text-right  ">
+                        <div class="col-md-12 ">
+                            <button class="btn btn-primary btn-icon-split" type="submit">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-save"></i>
+                                </span>
+                                <span class="text">Guardar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
