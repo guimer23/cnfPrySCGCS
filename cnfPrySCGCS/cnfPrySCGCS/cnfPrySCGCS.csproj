@@ -1703,6 +1703,7 @@
     <Content Include="asset\vendor\jquery\jquery.min.js" />
     <Content Include="asset\vendor\jquery\jquery.slim.js" />
     <Content Include="asset\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Areas\cnfMantenimiento\Views\cnfClsUsuario\cnfFrmUsuarioVista.cshtml" />
     <Content Include="Areas\cnfMantenimiento\Views\cnfClsMetodologia\cnfFrmMetodologiaVista.cshtml" />
@@ -1880,6 +1881,8 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\cnfCmbios\cnfCmbiosAreaRegistration.cs" />
+    <Compile Include="Areas\cnfDashboard\cnfDashboardAreaRegistration.cs" />
+    <Compile Include="Areas\cnfDashboard\Controllers\cnfClsDashboardController.cs" />
     <Compile Include="Areas\cnfMantenimiento\cnfMantenimientoAreaRegistration.cs" />
     <Compile Include="Areas\cnfMantenimiento\Controllers\cnfClsEntregableController.cs" />
     <Compile Include="Areas\cnfMantenimiento\Controllers\cnfClsFaseController.cs" />
@@ -1887,6 +1890,9 @@
     <Compile Include="Areas\cnfMantenimiento\Controllers\cnfClsUsuarioController.cs" />
     <Compile Include="Areas\cnfMantenimiento\Models\cnfUSUpUsuario.cs" />
     <Compile Include="Areas\cnfProyecto\cnfProyectoAreaRegistration.cs" />
+    <Compile Include="Areas\cnfProyecto\Controllers\cnfClsProyectoController.cs" />
+    <Compile Include="Areas\cnfProyecto\Controllers\cnfClsProyectoEntregableController.cs" />
+    <Compile Include="Areas\cnfProyecto\Controllers\cnfClsProyectoMiembroController.cs" />
     <Compile Include="Areas\cnfSeguridad\cnfSeguridadAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1899,10 +1905,15 @@
     <Content Include="Areas\cnfMantenimiento\Views\web.config" />
     <Content Include="Areas\cnfProyecto\Views\web.config" />
     <Content Include="Areas\cnfSeguridad\Views\web.config" />
-    <Content Include="Areas\cnfMantenimiento\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\cnfMantenimiento\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\cnfMantenimiento\Views\cnfClsEntregable\cnfFrmEntregableRelacionVista.cshtml" />
+    <Content Include="Areas\cnfDashboard\Views\web.config" />
+    <Content Include="Areas\cnfDashboard\Views\cnfClsDashboard\cnfFrmDashboardVista.cshtml" />
+    <Content Include="Areas\cnfProyecto\Views\cnfClsProyecto\cnfFrmProyectoVista.cshtml" />
+    <Content Include="Areas\cnfProyecto\Views\cnfClsProyectoEntregable\cnfFrmProyectoEntregableVista.cshtml" />
+    <Content Include="Areas\cnfProyecto\Views\cnfClsProyectoMiembro\cnfFrmProyectoMiembroVista.cshtml" />
     <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1915,7 +1926,9 @@
     <Folder Include="Areas\cnfCmbios\Controllers\" />
     <Folder Include="Areas\cnfCmbios\Models\" />
     <Folder Include="Areas\cnfCmbios\Views\Shared\" />
-    <Folder Include="Areas\cnfProyecto\Controllers\" />
+    <Folder Include="Areas\cnfDashboard\Models\" />
+    <Folder Include="Areas\cnfDashboard\Views\Shared\" />
+    <Folder Include="Areas\cnfMantenimiento\Views\Shared\" />
     <Folder Include="Areas\cnfProyecto\Models\" />
     <Folder Include="Areas\cnfProyecto\Views\Shared\" />
     <Folder Include="Areas\cnfSeguridad\Controllers\" />

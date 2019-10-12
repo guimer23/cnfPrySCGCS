@@ -1,48 +1,65 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <!-- Titulo Encabezado de Pagina -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Registrar Fase</h1>
+    <h1 class="h3 mb-0 text-gray-800">Gestionar Proyecto</h1>
     @*<a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generar Reporte</a>*@
 </div>
 
 <!-- Tarjeta de  contenido -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Información de Fase</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Información de Proyecto</h6>
     </div>
     <div class="card-body">
         <div class="row">
             <div class="col-md-12">
                 <div class="card-box">
-                    @using (Html.BeginForm("Guardar", "Fase", FormMethod.Post, new { @id = "needs-validation", @novalidate = "novalidate" }))
+                    @using (Html.BeginForm("Guardar", "Entregable", FormMethod.Post, new { @id = "needs-validation", @novalidate = "novalidate" }))
                     {
-
                         <div class="row clearfix">
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label>Código <span class="text-danger"></span></label>
+                                    <input class="form-control" type="text" disabled>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Jefe de Proyecto <span class="text-danger"></span></label>
+                                    <input class="form-control" type="text" disabled>
+                                </div>
+                            </div>
                             <div class="col-md-6">
-                                @Html.Label("Nombre")
+                                <div class="form-group">
+                                    <label>Nombre de Proyecto <span class="text-danger"></span></label>
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row clearfix">                            
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Descripción <span class="text-danger"></span></label>
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-md-5">
+                                @Html.Label("Metodología")
                                 <div class="form-group">
                                     <select name="Estado" class="form-control">
                                         <option value="">- Seleccionar -</option>
                                         <option value="RUP">RUP</option>
-                                        <option value="SCRUM">SCRUM</option>
-                                        <option value="ETc">ETC</option>
+                                        <option value="XP">XP</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>MEFnombre <span class="text-danger"></span></label>
-                                    <input class="form-control" type="text">
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row clearfix">
-
-                            <div class="col-md-6">
-                                @Html.Label("MEFestado")
+                            <div class="col-md-3">
+                                @Html.Label("Estado")
                                 <div class="form-group">
                                     <select name="Estado" class="form-control">
                                         <option value="">- Seleccionar -</option>
@@ -51,14 +68,13 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
-                                    <label>Fecha de Registro <span class="text-danger"></span></label>
+                                    <label>Fecha de registro <span class="text-danger"></span></label>
                                     <input class="form-control" type="text" disabled>
                                 </div>
                             </div>
                         </div>
-
                         <div class="row clearfix text-right  ">
                             <div class="col-md-12 ">
                                 <button class="btn btn-primary btn-icon-split" type="submit">
@@ -79,7 +95,7 @@
 <!-- Tarjeta de  contenido -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Lista de Fases</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Lista de Proyectos</h6>
     </div>
     <div class="card-body">
         <div class="row">
@@ -90,8 +106,8 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Fase</th>
-                                    <th>Metodología</th>
+                                    <th>Proyecto</th>
+                                    <th>Jefe de Proyecto</th>                                    
                                     <th>Estado</th>
                                     <th class="text-right">Acción</th>
                                 </tr>
@@ -100,8 +116,8 @@
 
                                 <tr>
                                     <td>1</td>
-                                    <td>Inicio</td>
-                                    <td>RUP</td>
+                                    <td>Epis 2019</td>
+                                    <td>Nilton Edy Perez Mamani</td>                                    
                                     <td><h5><span class="badge badge-success">Activo</span></h5></td>
                                     <td class="text-right">
                                         <div class="dropdown dropdown-action">
@@ -110,14 +126,14 @@
                                                     <i class="fas fa-edit"></i>
                                                 </span>
                                                 <span class="text">Editar</span>
-                                            </a>
+                                            </a>                                            
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
-                                    <td>Elaboración</td>
-                                    <td>RUP</td>
+                                    <td>CATEC 2019</td>
+                                    <td>Orestes Ramirez Ticona</td>
                                     <td><h5><span class="badge badge-danger">Inactivo</span></h5></td>
                                     <td class="text-right">
                                         <div class="dropdown dropdown-action">
@@ -126,7 +142,7 @@
                                                     <i class="fas fa-edit"></i>
                                                 </span>
                                                 <span class="text">Editar</span>
-                                            </a>
+                                            </a>                                            
                                         </div>
                                     </td>
                                 </tr>
@@ -138,3 +154,6 @@
         </div>
     </div>
 </div>
+
+
+

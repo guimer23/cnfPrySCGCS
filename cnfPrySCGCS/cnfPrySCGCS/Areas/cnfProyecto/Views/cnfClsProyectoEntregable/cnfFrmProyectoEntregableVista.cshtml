@@ -1,0 +1,157 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/asset/css/checkbox.css" rel="stylesheet" />
+
+<!-- Titulo Encabezado de Pagina -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Entregables del Proyecto</h1>
+    @*<a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generar Reporte</a>*@
+</div>
+
+<!-- Tarjeta de  contenido -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Información de Entregables</h6>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card-box">
+                    @using (Html.BeginForm("Guardar", "Entregable", FormMethod.Post, new { @id = "needs-validation", @novalidate = "novalidate" }))
+                    {
+                        
+                        <div class="row clearfix">
+                            <div class="col-md-12">
+                                @Html.Label("Proyecto")
+                                <div class="form-group">
+                                    <select name="Estado" class="form-control">
+                                        <option value="">- Seleccionar -</option>
+                                        <option value="CATEC 2019 - II">CATEC 2019 - II</option>
+                                        <option value="Concurso de Proyectos EPIS 2019-II">Concurso de Proyectos EPIS 2019-II</option>
+                                    </select>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="row clearfix text-right  ">
+                            <div class="col-md-12 ">
+                                <button class="btn btn-info btn-icon-split" type="submit">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-tasks"></i>
+                                    </span>
+                                    <span class="text">Entregables</span>
+                                </button>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tarjeta de  contenido -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Lista de Entregables</h6>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card-box">
+                    <div class="table-responsive">
+                        <table id="example" class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Fase</th>
+                                    <th>Fecha Inicio Fase</th>
+                                    <th>Fecha Fin Fase</th>
+                                    <th>Entregable</th>
+                                    <th class="text-right">Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>Inicio</td>
+                                    <td>
+                                        <div class="row clearfix">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="row clearfix">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Acta de Constitución</td>
+                                    <td class="text-right">
+                                        <label class="switch ">
+                                            <input type="checkbox" class="primary">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Elaboración</td>
+                                    <td>
+                                        <div class="row clearfix">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="row clearfix">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Diagrama de Caso de Uso</td>
+                                    <td class="text-right">
+                                        <label class="switch ">
+                                            <input type="checkbox" class="primary">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br />
+                    <div class="row clearfix text-right  ">
+                        <div class="col-md-12 ">
+                            <button class="btn btn-primary btn-icon-split" type="submit">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-save"></i>
+                                </span>
+                                <span class="text">Guardar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

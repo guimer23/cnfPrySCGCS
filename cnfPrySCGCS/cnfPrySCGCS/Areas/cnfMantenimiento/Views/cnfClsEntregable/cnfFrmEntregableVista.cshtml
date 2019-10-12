@@ -1,4 +1,7 @@
-﻿<!-- Titulo Encabezado de Pagina -->
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Titulo Encabezado de Pagina -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Registrar Entregable</h1>
     @*<a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generar Reporte</a>*@
@@ -12,7 +15,7 @@
     <div class="card-body">
         <div class="row">
             <div class="col-md-12">
-                <div class="card-box">                    
+                <div class="card-box">
                     @using (Html.BeginForm("Guardar", "Entregable", FormMethod.Post, new { @id = "needs-validation", @novalidate = "novalidate" }))
                     {
 
@@ -28,8 +31,8 @@
                                 <div class="form-group">
                                     <select name="Estado" class="form-control">
                                         <option value="">- Seleccionar -</option>
-                                        <option value="Activo">Activo</option>
-                                        <option value="Inactivo">Inactivo</option>
+                                        <option value="RUP">RUP</option>
+                                        <option value="XP">XP</option>
                                     </select>
                                 </div>
                             </div>
@@ -38,8 +41,8 @@
                                 <div class="form-group">
                                     <select name="Estado" class="form-control">
                                         <option value="">- Seleccionar -</option>
-                                        <option value="Activo">Activo</option>
-                                        <option value="Inactivo">Inactivo</option>
+                                        <option value="Inicio">Inicio</option>
+                                        <option value="Construcción">Construcción</option>
                                     </select>
                                 </div>
                             </div>
@@ -165,7 +168,7 @@
                                                     <i class="fas fa-edit"></i>
                                                 </span>
                                                 <span class="text">Editar</span>
-                                            </a>                                            
+                                            </a>
                                             <a href="cnfFrmEntregableRelacionVista" class="btn btn-warning btn-icon-split btn-sm">
                                                 <span class="icon text-white-50">
                                                     <i class="fas fa-exchange-alt"></i>

@@ -1,4 +1,7 @@
-﻿<!-- Titulo Encabezado de Pagina -->
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Titulo Encabezado de Pagina -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Registrar Metodología</h1>
     @*<a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generar Reporte</a>*@
@@ -12,7 +15,7 @@
     <div class="card-body">
         <div class="row">
             <div class="col-md-12">
-                <div class="card-box">                    
+                <div class="card-box">
                     @using (Html.BeginForm("Guardar", "Metodología", FormMethod.Post, new { @id = "needs-validation", @novalidate = "novalidate" }))
                     {
                         <div class="row clearfix">
